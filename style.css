@@ -1,1 +1,8 @@
-
+#flags {
+    height: 100px;
+    width: 200px;
+}
+#countryNames {
+    font-size: 22px;
+    padding-bottom: 10px;
+}
