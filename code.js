@@ -6,6 +6,7 @@ function(data)
     {
         //cImage(data);
         cList(data);
+        //cTable(data);
         console.log("works",data);
     },
     function(err)
@@ -27,8 +28,46 @@ var cList = function(data)
         return d.name
     })
     
-    .append("div").attr("id","flags").append("img").attr("src",function(d){return d.flag}).attr("height",100).attr("width",200);
+    .append("div")
+    .attr("id","flags")
+    .append("img")
+    .attr("src",function(d){return d.flag})
+    .attr("height",100)
+    .attr("width",200)
+    .on("click",function(d)
+       {
+        cTable(d);
+    })
 }
+
+
+var cTable = function(country)
+{
+    
+//d3.selectAll("img")
+//.on("click",function(data)
+//{
+    d3.selectAll("tbody *").remove();
+    
+    var row = d3.select("tbody")
+    .selectAll("tr")
+    .data(country)
+    .enter()
+    .append("tr");
+    
+    row.append("td")
+        .text(function(d){
+        return d.capital
+    })
+    
+    
+   alert("onclick works") 
+//})
+
+}
+
+
+
 
 /*var cImage = function(data)
 {
