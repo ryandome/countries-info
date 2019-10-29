@@ -17,18 +17,18 @@ function(data)
 
 var cList = function(data)
 {
-   d3.select("body").append("ul").attr("id","list");
-    d3.select("#list").selectAll("li")
+   d3.selectAll("tbody").attr("id","Gtable");
+    d3.select("#Gtable").selectAll("tr")
     .data(data)
     .enter()
-    .append("li")
-    .append("div")
+    .append("tr")
+    .append("td")
     .attr("id","countryNames")
     .text(function(d){
         return d.name
     })
     
-    .append("div")
+    .append("td")
     .attr("id","flags")
     .append("img")
     .attr("src",function(d){return d.flag})
@@ -36,7 +36,7 @@ var cList = function(data)
     .attr("width",200)
     .on("click",function(d)
        {
-        cTable(d);
+        cTable(d, d3.select(this));
     })
 
 
@@ -44,33 +44,32 @@ var cList = function(data)
 var cTable = function(country)
 {
    
-    d3.selectAll("tbody *").remove();
+    /*d3.selectAll("tbody");*/
     
-    var row = d3.select("tbody")
-    .selectAll("tr")
-    .data(data)
-    .enter()
-    .append("tr");
-    
-    row.append("td")
+    var row = d3.select("#Gtable");
+    //.selectAll("tr")
+    //.data(data)
+    //.enter()
+    row.append("tr")
+     
+        .append("td")
         .text(function(d){
-        var mapC = data[0].capital
-        return mapC
+        return d.capital
     })
     
     row.append("td")
         .text(function(d){
-        return data[0].area
+        return d.area
     })
     
      row.append("td")
         .text(function(d){
-        return data[0].population
+        return d.population
     })
     
      row.append("td")
         .text(function(d){
-        return data[0].nativeName
+        return d.nativeName
     })
     
     
