@@ -38,35 +38,46 @@ var cList = function(data)
        {
         cTable(d);
     })
-}
+
 
 
 var cTable = function(country)
 {
-    
-//d3.selectAll("img")
-//.on("click",function(data)
-//{
+   
     d3.selectAll("tbody *").remove();
     
     var row = d3.select("tbody")
     .selectAll("tr")
-    .data(country)
+    .data(data)
     .enter()
     .append("tr");
     
     row.append("td")
         .text(function(d){
-        return d.capital
+        var mapC = data[0].capital
+        return mapC
+    })
+    
+    row.append("td")
+        .text(function(d){
+        return data[0].area
+    })
+    
+     row.append("td")
+        .text(function(d){
+        return data[0].population
+    })
+    
+     row.append("td")
+        .text(function(d){
+        return data[0].nativeName
     })
     
     
-   alert("onclick works") 
-//})
-
+   //alert("onclick works")
 }
 
-
+}
 
 
 /*var cImage = function(data)
