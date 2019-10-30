@@ -17,11 +17,10 @@ function(data)
 
 var cList = function(data)
 {
-   d3.selectAll("tbody").attr("id","Gtable");
-    d3.select("#Gtable").selectAll("tr")
+    d3.select("tbody").selectAll("#Gtable")
     .data(data)
     .enter()
-    .append("tr")
+    .append("tr").attr("id","Gtable")
     .append("td")
     .attr("id","countryNames")
     .text(function(d){
@@ -34,40 +33,32 @@ var cList = function(data)
     .attr("src",function(d){return d.flag})
     .attr("height",100)
     .attr("width",200)
-    .on("click",function(d)
+    .on("click",function(country)
        {
-        cTable(d, d3.select(this));
+        cTable(country);
     })
-
+}
 
 
 var cTable = function(country)
 {
-   
-    /*d3.selectAll("tbody");*/
-    
-    var row = d3.select("#Gtable");
-    //.selectAll("tr")
-    //.data(data)
-    //.enter()
-    row.append("tr")
-     
+    d3.selectAll("#Gtable")
         .append("td")
-        .text(function(d){
-        return d.capital
+        .text(function(country){
+        return country.capital
     })
     
-    row.append("td")
-        .text(function(d){
-        return d.area
+    d3.selectAll("#Gtable").append("td")
+        .text(function(country){
+        return country.area
     })
     
-     row.append("td")
+     d3.selectAll("#Gtable").append("td")
         .text(function(d){
         return d.population
     })
     
-     row.append("td")
+d3.selectAll("#Gtable").append("td")
         .text(function(d){
         return d.nativeName
     })
@@ -76,7 +67,7 @@ var cTable = function(country)
    //alert("onclick works")
 }
 
-}
+
 
 
 /*var cImage = function(data)
