@@ -6,6 +6,7 @@ function(data)
     {
         //cImage(data);
         cList(data);
+        reverseSort(data.reverse())
         //cTable(data);
         console.log("works",data);
     },
@@ -70,6 +71,16 @@ d3.selectAll("#Gtable").append("td")
         return d.nativeName
     })
 }
+
+var reverseSort = function(country)
+{
+    d3.select("#reverse")
+    .on("click", function(country)
+       {
+        cList(country)
+    })
+}
+
 
 
 

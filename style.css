@@ -2,22 +2,51 @@
     height: 100px;
     width: 150px;
 }
+
 #countryNames {
     font-size: 22px;
     padding-bottom: 10px;
 }
 
 td { border: solid;}
-.AO { height: 100px;
-   width: 100px;
-float: left;
-background-color: aqua}
-.gz {height: 100px;
-width:100px;
-background-color: aquamarine;
-overflow: auto;}
-.last{height: 100px;
-width: 100px;
-overflow: auto;
-background-color: beige}
+
+.AO { 
+    height: 100px;
+    width: 100px;
+    float: left;
+    background-color: aqua
+}
+
+.gz {
+    height: 100px;
+    width:100px;
+    background-color: aquamarine;
+    overflow: auto;
+}
+
+#reverse{
+    height: 100px;
+    width: 100px;
+    overflow: auto;
+    background-color: beige;
+   float:right;
+    clear:left;
+}
+
+.last{
+    height: 100px;
+    width: 100px;
+    overflow:auto;
+    background-color: darkgrey;
+}
+
+#size {
+    height:200px;
+    width:200px;
+    
+}
+
 table{float: left}
+
+
+
