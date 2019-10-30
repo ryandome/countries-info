@@ -6,6 +6,10 @@ function(data)
     {
         //cImage(data);
         cList(data);
+        sortTable(data);
+        sortpopAsc(data);
+        sortarAsc(data);
+        sortardes(data);
         //reverseSort(data.reverse())
         //cTable(data);
         console.log("works",data);
@@ -36,6 +40,7 @@ var cList = function(data)
     .attr("width",200)
     .on("click",function(country)
        {
+        d3.selectAll(".tbr").remove();
         cTable(country);
     })
 }
@@ -44,17 +49,17 @@ var cList = function(data)
 var cTable = function(country)
 {
     d3.selectAll("#Gtable")
-        .append("td")
+        .append("td").attr("class","tbr")
         .text(function(country){
         return country.capital
     })
     
-    d3.selectAll("#Gtable").append("td")
+    d3.selectAll("#Gtable").append("td").attr("class","tbr")
         .text(function(country){
         return country.area
     })
     
-     d3.selectAll("#Gtable").append("td")
+     d3.selectAll("#Gtable").append("td").attr("class","tbr")
         .text(function(d){
         return d.population
          
@@ -66,7 +71,7 @@ var cTable = function(country)
      })
     
     
-d3.selectAll("#Gtable").append("td")
+d3.selectAll("#Gtable").append("td").attr("class","tbr")
         .text(function(d){
         return d.nativeName
     })
@@ -75,15 +80,66 @@ d3.selectAll("#Gtable").append("td")
 
 var sortTable = function(data)
 {
-    d3.select("#reverse")
-    .on("click",funtion()
-       {
-        d3.select("table").remove();
-        data.sort(function (a,b){return a.area-b.area})
+    d3.select("#reverse").on("click",function()
+    {
+        d3.selectAll("#Gtable").remove();
         
+        data.sort(function(a,b)
+                  {
+                    return b.population-a.population;
+                   })
         cList(data);
-        })
+        cTable(data);
+    })   
 }
+var sortpopAsc = function(data)
+{
+    d3.select(".popAsc").on("click",function()
+    {
+        d3.selectAll("#Gtable").remove();
+        
+        data.sort(function(a,b)
+                  {
+                    return a.population-b.population;
+                   })
+        cList(data);
+        cTable(data);
+    })   
+}
+var sortarAsc = function(data)
+{
+    d3.select(".AAAsc").on("click",function()
+    {
+        d3.selectAll("#Gtable").remove();
+        
+        data.sort(function(a,b)
+                  {
+                    return a.area-b.area;
+                   })
+        cList(data);
+        cTable(data);
+    })   
+}
+var sortardes = function(data)
+{
+    d3.select(".AADes").on("click",function()
+    {
+        d3.selectAll("#Gtable").remove();
+        
+        data.sort(function(a,b)
+                  {
+                    return b.area-a.area;
+                   })
+        cList(data);
+        cTable(data);
+    })   
+}
+var FiltreAO = function(data)
+{
+    d3.select(".filtreAO").on("click", )                        
+    
+                              }
+
 
 
 /*

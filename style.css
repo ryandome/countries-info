@@ -10,18 +10,18 @@
 
 td { border: solid;}
 
-.AO { 
+.popAsc { 
     height: 100px;
     width: 100px;
     float: left;
     background-color: aqua
 }
 
-.gz {
+.AADes {
     height: 100px;
     width:100px;
     background-color: aquamarine;
-    overflow: auto;
+    float: left;
 }
 
 #reverse{
@@ -29,24 +29,36 @@ td { border: solid;}
     width: 100px;
     overflow: auto;
     background-color: beige;
-   float:right;
-    clear:left;
+   float:left;
 }
 
-.last{
+.AAAsc{
     height: 100px;
     width: 100px;
-    overflow:auto;
-    background-color: darkgrey;
+    background-color: darkcyan;
+    float: left;
 }
 
 #size {
     height:200px;
-    width:200px;
+    width:1000px;
     
 }
 
 table{float: left}
-
+.alph { height: 100px;
+width: 100px;
+    background-color: brown;
+    float: left;
+}
+.filtreAO{ width: 100px;
+height: 100px;
+background-color: chartreuse;
+}
+.filtrePZ{ width:100px;
+    height:100px;
+    background-color: darkkhaki;
+    
+}
 
 
