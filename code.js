@@ -56,17 +56,20 @@ var cTable = function(country)
      d3.selectAll("#Gtable").append("td")
         .text(function(d){
         return d.population
-    })
+         
+	 }).style("color", function(d){var pop = d.population
+     if(pop>200000) {
+         return "red"
+     }
+                                   else { return "green"}
+     })
+    
     
 d3.selectAll("#Gtable").append("td")
         .text(function(d){
         return d.nativeName
     })
-    
-    
-   //alert("onclick works")
 }
-
 
 
 

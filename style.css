@@ -8,3 +8,16 @@
 }
 
 td { border: solid;}
+.AO { height: 100px;
+   width: 100px;
+float: left;
+background-color: aqua}
+.gz {height: 100px;
+width:100px;
+background-color: aquamarine;
+overflow: auto;}
+.last{height: 100px;
+width: 100px;
+overflow: auto;
+background-color: beige}
+table{float: left}
