@@ -1,18 +1,29 @@
 <head>  </head>
 <html> <link href = "style.css" type ="text/css" rel ="stylesheet">
-<body>
+<body class="notes">
    <h1>  Notes </h1> 
    
-   <p> 
-      The table starts with all 250 countries sorted alphabetically and their respective flag.
-      You can click on the flag of any of the countries and it will create new columns in the table that reveal new information
-      about the countries. At the top of the page there are buttons that allow you to sort the data in a variety of ways.
-      You can sort them from greatest to least in terms of their area and population or from least to greatest in terms of area
-      and population. If you would like to view the original table you can click the button for alphabetically and it will sort 
-      the table alphabetically by country name. The category for population density was not a part of our api, but we where able to use
-      the country areas and populations given to us in the api to calculate this value. We then found the average population density 
-      for all countries in the world. If a country's population density appears in a light red table cell then that means the country has
-      a population density that is above average. 
-   </p>
+   <ul>
+    <li> The table starts with all 250 countries sorted alphabetically with their respective flag. </li>
+       <li> You can click on the flag of any of the countries and it will create new columns in the table that reveal new information
+      about the countries. </li>
+       <li> At the top of the page there are buttons that allow you to sort the data in a variety of ways. </li>
+       <li>You can sort them from greatest to least in terms of their area and population or from least to greatest in terms of area
+      and population.  </li>
+       <li>  If you would like to view the original table you can click the button for alphabetical and it will sort 
+      the table alphabetically by country name. </li>
+        <li> The category for population density was not a part of our API, but we were able to use
+      the country areas and populations given to us in the API to calculate this value. 
+       We then found the average population density 
+      for all countries in the world. </li>
+       <li>  If a country's population density appears in a light red table cell then that means the country has
+      a population density that is above average, and might have an overpopulation problem. </li>
+       <li> Added Units on numbered data which were not included in the original API </li>
+       <li> Some population densities have a value of "infinity". This is because their area was unknown in the API and the javascript puts a value of zero for unknowns. Since we were dividing population by area, the denominator had a value of zero resulting in "infinity" for those population densities. </li>
+       <li> <a href="https://restcountries.eu/rest/v2/all"> API </a> </li>
+       <li> <a href="https://restcountries.eu/"> API webpage </a></li>
+       <li> <a href="https://www.thoughtco.com/population-density-overview-1435467"> Link we used to research population densities </a>  </li>
+       
+    </ul>
 </body>
 </html>

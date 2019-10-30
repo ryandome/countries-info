@@ -56,7 +56,7 @@ var cTable = function(country)
     
     d3.selectAll("#Gtable").append("td").attr("class","tbr")
         .text(function(country){
-        return country.area
+        return country.area + " sq km"
     })
     
      d3.selectAll("#Gtable").append("td").attr("class","tbr")
@@ -72,7 +72,7 @@ d3.selectAll("#Gtable").append("td").attr("class","tbr")
     d3.selectAll("#Gtable").append("td").attr("class","tbr").text(function(d)
     {
     var popdense = d.population / d.area 
-    return popdense
+    return popdense + " people/sq km"
     }
 ).style("background-color", function(d)
 {var popdense = d.population / d.area

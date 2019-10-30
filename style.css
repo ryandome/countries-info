@@ -1,4 +1,4 @@
-div{transition: 0.3s;}
+div{transition: 0.4s;}
 #flags {
     height: 100px;
     width: 150px;
@@ -66,17 +66,18 @@ background-color:maroon;
 th {
     border-bottom: solid;
     background-color: #BCBABE;
-    transition: 0.3s;
+    transition: 0.4s;
 }
 tr:nth-child(even) {
     background-color: #CAC8BD;
-    transition: 0.3s;
+    transition: 0.4s;
 }
 tr:nth-child(odd) { background-color:#D6E1EB; }
 body {
     background-color: #99AEBF;
     font-size: 22px;
     font-family:sans-serif; 
+    padding-left: 10px
 }
 td {padding: 10px;
 	color: ;
@@ -85,3 +86,7 @@ td {padding: 10px;
 tr:hover, .popAsc:hover, .alph:hover, .AADes:hover, #reverse:hover, .AAAsc:hover {background-color: #5885AF;}
 
 bad{background-color: red}
+.notes { margin-right: 40% }
+li { margin-bottom: 5px;}
+#link {float: right;
+padding-right: 40%}
