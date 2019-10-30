@@ -6,7 +6,7 @@ function(data)
     {
         //cImage(data);
         cList(data);
-        reverseSort(data.reverse())
+        //reverseSort(data.reverse())
         //cTable(data);
         console.log("works",data);
     },
@@ -72,15 +72,30 @@ d3.selectAll("#Gtable").append("td")
     })
 }
 
+
+var sortTable = function(data)
+{
+    d3.select("#reverse")
+    .on("click",funtion()
+       {
+        d3.select("table").remove();
+        data.sort(function (a,b){return a.area-b.area})
+        
+        cList(data);
+        })
+}
+
+
+/*
 var reverseSort = function(country)
 {
     d3.select("#reverse")
     .on("click", function(country)
        {
-        cList(country)
+        return cList
     })
 }
-
+*/
 
 
 
