@@ -63,19 +63,25 @@ var cTable = function(country)
         .text(function(d){
         return d.population
          
-	 }).style("color", function(d){var pop = d.population
-     if(pop>200000) {
-         return "red"
-     }
-                                   else { return "green"}
-     })
-    
+	 })
     
 d3.selectAll("#Gtable").append("td").attr("class","tbr")
         .text(function(d){
         return d.nativeName
     })
+    d3.selectAll("#Gtable").append("td").attr("class","tbr").text(function(d)
+    {
+    var popdense = d.population / d.area 
+    return popdense
+    }
+).style("background-color", function(d)
+{var popdense = d.population / d.area
+        if( popdense > 57){ return "#FF9494" 
+    }
+ else { return "white" }
+        })
 }
+
 
 
 var sortTable = function(data)
@@ -134,12 +140,6 @@ var sortardes = function(data)
         cTable(data);
     })   
 }
-var FiltreAO = function(data)
-{
-    d3.select(".filtreAO").on("click", )                        
-    
-                              }
-
 
 
 /*
@@ -161,6 +161,7 @@ var reverseSort = function(country)
    
     
     
-    
+    https://www.thoughtco.com/population-density-overview-1435467 
+    Link for Pop Density
     
 }*/

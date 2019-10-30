@@ -1,3 +1,4 @@
+div{transition: 0.3s;}
 #flags {
     height: 100px;
     width: 150px;
@@ -8,57 +9,79 @@
     padding-bottom: 10px;
 }
 
-td { border: solid;}
-
 .popAsc { 
     height: 100px;
-    width: 100px;
+    width: 150px;
     float: left;
-    background-color: aqua
+    background-color: #CAC8BD;
 }
-
+td {text-align: center;}
 .AADes {
     height: 100px;
-    width:100px;
-    background-color: aquamarine;
+    width:150px;
+    background-color: #D6E1EB;
     float: left;
 }
 
 #reverse{
     height: 100px;
-    width: 100px;
+    width: 150px;
     overflow: auto;
-    background-color: beige;
+    background-color: #CAC8BD;
    float:left;
 }
 
 .AAAsc{
     height: 100px;
-    width: 100px;
-    background-color: darkcyan;
+    width: 150px;
+    background-color: #D6E1EB;
     float: left;
 }
 
 #size {
-    height:200px;
-    width:1000px;
+    height:300px;
+    width:750px;
+    font-size: 22px;
     
 }
 
-table{float: left}
+
 .alph { height: 100px;
-width: 100px;
-    background-color: brown;
+width: 150px;
+    background-color: #CAC8BD;
     float: left;
 }
-.filtreAO{ width: 100px;
+.filtreAO{ width: 150px;
 height: 100px;
-background-color: chartreuse;
+background-color:maroon;
+    float: left;
 }
-.filtrePZ{ width:100px;
+.filtrePZ{ width:150px;
     height:100px;
     background-color: darkkhaki;
+    float: left;
     
 }
+.Info {float: left;}
+th {
+    border-bottom: solid;
+    background-color: #BCBABE;
+    transition: 0.3s;
+}
+tr:nth-child(even) {
+    background-color: #CAC8BD;
+    transition: 0.3s;
+}
+tr:nth-child(odd) { background-color:#D6E1EB; }
+body {
+    background-color: #99AEBF;
+    font-size: 22px;
+    font-family:sans-serif; 
+}
+td {padding: 10px;
+	color: ;
 
+}
+tr:hover, .popAsc:hover, .alph:hover, .AADes:hover, #reverse:hover, .AAAsc:hover {background-color: #5885AF;}
 
+bad{background-color: red}
